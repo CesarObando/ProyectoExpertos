@@ -232,27 +232,7 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
-      <form name="filtros" action="" method="post" class="form-group">
-        <div class="form-inline">
-          <select name="lugar" id="lugar" class="form-control" tabindex="9" data-settings='{"wrapperClass":"flat"}' onchange="ponerMarcadores()">
-            <option value="0">San José</option>
-            <option value="1">Alajuela</option>
-            <option value="2">Cartago</option>
-            <option value="3">Guanacaste</option>
-          </select>
-          <br>
-          <label class="h4" for="opciones">Buscar por:</label>
-          <select name="opciones" value="Todos" class="form-control">
-            <option value="Precio">Precio</option>
-            <option value="Distancia">Distancia</option>
-            <option value="Clima">Clima</option>
-            <option value="Duración">Duración</option>
-          </select>
-          <input type="text" name="filtro" class="form-control">
-        </div>
-        <div id="mapa" style="width: 1000px; height: 450px;"></div>
-      </form>
-  </nav>
+
 
   <div class="content">
     <div class="container-fluid">
@@ -264,7 +244,7 @@
 
             <div class="form-group">
               <label>Lugar</label>
-              <select name="lugar" id="lugar" class="form-control" tabindex="9">
+              <select name="lugar" id="lugar" class="form-control" tabindex="9" onchange="ponerMarcadores()">
                 <option value="0">San José</option>
                 <option value="1">Alajuela</option>
                 <option value="2">Cartago</option>
@@ -311,6 +291,7 @@
                 <option value="3">Caliente</option>
               </select>
             </div>
+            <div id="mapa" style="width: 1000px; height: 450px;"></div>
 
           </form>
         </div>

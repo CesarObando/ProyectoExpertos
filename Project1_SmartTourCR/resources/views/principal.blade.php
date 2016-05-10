@@ -95,49 +95,39 @@
     </div>
     <div class="footer">
       <hr>
-      <div class="stats">
-        <i class="fa fa-history"></i> Updated 3 minutes ago
+      <div class="container-fluid">
+        <nav class="pull-left">
+          <ul>
+            <li>
+              <a href="#">
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Company
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Portfolio
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Blog
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <p class="copyright pull-right">
+          &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+        </p>
       </div>
     </div>
   </div>
 </div>
 </div>
-<footer class="footer">
-  <div class="container-fluid">
-    <nav class="pull-left">
-      <ul>
-        <li>
-          <a href="#">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Company
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Blog
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <p class="copyright pull-right">
-      &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-    </p>
-  </div>
-</footer>
-
-</div>
-</div>
-
-
 </body>
 
 <!--   Core JS Files   -->

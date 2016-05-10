@@ -99,6 +99,8 @@
       <!-- Insertar aquí lo visible al usuario-->
 
     </div>
+  </div>
+</div>
     <div class="footer">
       <div class="container-fluid">
         <nav class="pull-left">

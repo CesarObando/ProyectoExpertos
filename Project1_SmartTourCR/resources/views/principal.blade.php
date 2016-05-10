@@ -226,7 +226,6 @@
         </li>
       </ul>
     </div>
-<<<<<<< HEAD
 
 </nav>
 
@@ -253,10 +252,7 @@
         </div>
         <div id="mapa" style="width: 1000px; height: 450px;"></div>
       </form>
-
-=======
   </nav>
->>>>>>> 2b9f02a2134077651043492e17312550df1854cc
 
   <div class="content">
     <div class="container-fluid">
@@ -324,7 +320,7 @@
   </div>
 
 </div>
-<<<<<<< HEAD
+
     <footer class="footer">
       <div class="container-fluid">
         <nav class="pull-left">
@@ -356,45 +352,9 @@
         </p>
       </div>
     </footer>
-  </div>
-  </div>
-=======
-
-<footer class="footer">
-  <div class="container-fluid">
-    <nav class="pull-left">
-      <ul>
-        <li>
-          <a href="#">
-            Home
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Company
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="#">
-            Blog
-          </a>
-        </li>
-      </ul>
-    </nav>
-    <p class="copyright pull-right">
-      &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-    </p>
-  </div>
-</footer>
 </div>
 </div>
 
->>>>>>> 2b9f02a2134077651043492e17312550df1854cc
 </body>
 
 <!--   Core JS Files   -->

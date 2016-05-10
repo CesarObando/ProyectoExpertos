@@ -237,8 +237,6 @@
   <div class="content">
     <div class="container-fluid">
       <div class="row">
-
-        <!-- Insertar aquí lo visible al usuario-->
         <div class="col-lg-4">
           <form role="form">
 
@@ -291,11 +289,12 @@
                 <option value="3">Caliente</option>
               </select>
             </div>
-            <div id="mapa" style="width: 1000px; height: 450px;"></div>
-
           </form>
-        </div>
 
+        </div>
+        <div class="col-lg-6">
+        <div id="mapa" style="width: 1000px; height: 450px;"></div>
+      </div>
       </div>
     </div>
   </div>

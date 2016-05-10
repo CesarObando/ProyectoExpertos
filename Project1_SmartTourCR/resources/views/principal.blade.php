@@ -34,7 +34,7 @@
 <body>
 
   <div class="wrapper">
-    <div class="sidebar" data-color="green" data-image="assets/img/sidebar-5.jpg">
+    <div class="sidebar" data-color="azure" data-image="img/sidebar-5.jpg">
 
       <!--
 
@@ -52,7 +52,7 @@
     <ul class="nav">
       <li class="active">
         <a href="dashboard.html">
-          <i class="pe-7s-map"></i>
+          <i class="pe-7s-home"></i>
           <p>Inicio</p>
         </a>
       </li>
@@ -66,6 +66,12 @@
         <a href="user.html">
           <i class="pe-7s-map-marker"></i>
           <p>Atractivo</p>
+        </a>
+      </li>
+      <li>
+        <a href="user.html">
+          <i class="pe-7s-map"></i>
+          <p>Lugar</p>
         </a>
       </li>
     </ul>
@@ -94,7 +100,6 @@
 
     </div>
     <div class="footer">
-      <hr>
       <div class="container-fluid">
         <nav class="pull-left">
           <ul>

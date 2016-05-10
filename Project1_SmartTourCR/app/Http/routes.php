@@ -12,4 +12,7 @@
 */
 
 Route::get('/','PrincipalController@index');
+Route::get('listarLugares','LugarController@listar');
+Route::get('listarAtractivos','AtractivoController@listar');
 Route::resource('lugar','LugarController');
+Route::resource('atractivo','AtractivoController');

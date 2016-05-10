@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace smarttour;
 
 use Illuminate\Database\Eloquent\Model;
 

@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace smarttour\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use smarttour\Http\Requests;
 
 class LugarController extends Controller
 {

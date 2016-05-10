@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Jobs;
+namespace smarttour\Jobs;
 
 use Illuminate\Bus\Queueable;
 

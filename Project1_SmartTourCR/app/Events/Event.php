@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace smarttour\Events;
 
 abstract class Event
 {

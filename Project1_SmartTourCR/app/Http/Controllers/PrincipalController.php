@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace smarttour\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Http\Requests;
-use App\Http\Controllers\Controller;
+use smarttour\Http\Requests;
+use smarttour\Http\Controllers\Controller;
 
 class PrincipalController extends Controller
 {

@@ -12,3 +12,4 @@
 */
 
 Route::get('/','PrincipalController@index');
+Route::resource('lugar','LugarController');

@@ -15,10 +15,10 @@ class LugarController extends Controller
 
     public function create()
     {
-
+      return view ('lugar/insertarLugar');
     }
 
-    public function store()
+    public function store(Request $request)
     {
 
     }

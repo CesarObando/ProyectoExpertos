@@ -55,6 +55,8 @@
               <option value="3">Caliente</option>
             </select>
           </div>
+          
+          <input type="submit" name="buscar" value="Buscar" class="btn btn-info btn-fill pull-right">
         </form>
 
       </div>

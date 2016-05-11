@@ -12,7 +12,7 @@
   <label for="longitud">Longitud:</label>
   <input type="text" class="form-control" name="longitud" required="">
   <hr>
-  <input type="submit" name="insertarLugar" value="Insertar" class="btn-success btn-lg">
+  <input type="submit" name="insertarLugar" value="Insertar" class="btn btn-success btn-fill">
 {!!Form::close()!!}
 </div>
 </div>

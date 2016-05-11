@@ -1,9 +1,9 @@
 @extends('principal')
 @section('content')
 <div class="content">
-  <div class="container-fluid">
+<div class="container-fluid">
 <div class="col-md-12">
-                        <div class="card">
+  <div class="card">
 <div class="content table-responsive table-full-width">
                 <br>
                 <br>
@@ -31,8 +31,8 @@
                                 <td>{{$lugar->latitud}}</td>
                                 <td>{{$lugar->longitud}}</td>
                                 <td>
-                                  {!!link_to_route('lugar.edit', $title = 'Modificar', $parameters = $lugar->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
-                                  {!!link_to_action('LugarController@destroy', $title = 'Eliminar', $parameters = $lugar->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}
+                                  {!!link_to_route('lugar.edit', $title = 'Modificar', $parameters = $lugar->id, $attributes = ['class'=>'btn-warning btn-sm'])!!}
+                                  {!!link_to_action('LugarController@eliminar', $title = 'Eliminar', $parameters = $lugar->id, $attributes = ['class'=>'btn-danger btn-sm'])!!}
                                 </td>
                             </tr>
                         </tbody>

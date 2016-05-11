@@ -15,6 +15,7 @@ Route::get('/','PrincipalController@index');
 
 Route::resource('insertarLugar','LugarController@create');
 Route::get('verLugares','LugarController@verLugares');
+Route::get('eliminar/{id}','LugarController@eliminar');
 Route::resource('lugar','LugarController');
 
 Route::resource('insertarAtractivo','AtractivoController@create');

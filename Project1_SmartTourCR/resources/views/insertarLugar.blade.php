@@ -1,5 +1,7 @@
 @extends('principal')
 @section('content')
+<div class="content">
+  <div class="container-fluid">
 {!!Form::open(['route'=>'lugar.store','method'=>'post'])!!}
   <h1>Agregar Lugar</h1>
 
@@ -12,5 +14,6 @@
   <hr>
   <input type="submit" name="insertarLugar" value="Insertar" class="btn-success btn-lg">
 {!!Form::close()!!}
-
+</div>
+</div>
 @stop

@@ -36,7 +36,7 @@ class LugarController extends Controller
     public function edit($id)
     {
       $lugar = \smarttour\Lugar::find($id);
-      return view ('editarLugar',['lugar'=>$lugar]);
+      return view ('modificarLugar',['lugar'=>$lugar]);
     }
 
     public function update($id, Request $request)
@@ -51,11 +51,12 @@ class LugarController extends Controller
     {
       $lugar = \smarttour\Lugar::find($id);
       $lugar->delete();
+      return redirect('/');
     }
 
-    public function listar()
+    public function verLugares()
     {
       $lugares = \smarttour\Lugar::All();
-      return view('listarLugares',compact('lugares'));
+      return view('verLugares',compact('lugares'));
     }
 }

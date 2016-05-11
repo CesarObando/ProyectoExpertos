@@ -200,7 +200,7 @@
         </a>
       </li>
       <li>
-        <a href="{!!URL::to("insertarLugar")!!}">
+        <a href="{!!URL::to("verLugares")!!}">
           <i class="pe-7s-map-marker"></i>
           <p>Atractivo</p>
         </a>

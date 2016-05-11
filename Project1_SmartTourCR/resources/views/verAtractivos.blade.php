@@ -7,7 +7,7 @@
                 <br>
                 <h1>Atractivos</h1>
                 <br>
-                <a href="#" class="btn-success btn-lg">Agregar</a>
+                <a href="#" class="btn btn-success btn-fill">Agregar +</a>
                 <hr>
                 <form>
                     <table class="table table-hover table-striped">
@@ -25,7 +25,7 @@
                                 <th>Acciones</th>
                             </tr>
                         </thead>
-                        @foreach($lugares as $lugar)
+                        @foreach($atractivos as $atractivo)
                         <tbody>
                             <tr>
                                 <td>{{$atractivo->id_lugar}}</td>
@@ -38,7 +38,8 @@
                                 <td>{{$atractivo->latitud}}</td>
                                 <td>{{$atractivo->longitud}}</td>
                                 <td>
-                                  <!-- Acciones-->
+                                  {!!link_to_route('atractivo.edit', $title = 'Modificar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
+                                  {!!link_to_action('AtractivoController@destroy', $title = 'Eliminar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}
                                 </td>
                             </tr>
                         </tbody>

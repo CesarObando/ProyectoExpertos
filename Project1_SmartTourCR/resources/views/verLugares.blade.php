@@ -30,13 +30,8 @@
                                 <td>{{$lugar->latitud}}</td>
                                 <td>{{$lugar->longitud}}</td>
                                 <td>
-<<<<<<< HEAD
                                   {!!link_to_route('lugar.edit', $title = 'Modificar', $parameters = $lugar->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
                                   {!!link_to_action('LugarController@destroy', $title = 'Eliminar', $parameters = $lugar->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}
-=======
-                                  {!!link_to_route('lugar.edit', $title = 'Modificar', $parameters = $lugar->id, $attributes = ['class'=>'btn-warning btn-sm'])!!}
-                                  {!!link_to_route('lugar.destroy', $title = 'Eliminar', $parameters = $lugar->id, $attributes = ['class'=>'btn-danger btn-sm'])!!}
->>>>>>> 8374d7116094c1704fc79f7b55e714a3cf08ba7b
                                 </td>
                             </tr>
                         </tbody>

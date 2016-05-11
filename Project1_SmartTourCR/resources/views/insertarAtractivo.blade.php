@@ -56,7 +56,7 @@
     </select>
   </div>
   <hr>
-  <input type="submit" name="insertarAtractivo" value="Insertar" class="btn btn-default btn-fill">
+  <input type="submit" name="insertarAtractivo" value="Insertar" class="btn btn-success btn-fill">
 {!!Form::close()!!}
 
 @stop

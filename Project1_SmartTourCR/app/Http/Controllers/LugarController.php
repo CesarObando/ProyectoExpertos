@@ -49,8 +49,7 @@ class LugarController extends Controller
 
     public function destroy($id)
     {
-      $lugar = \smarttour\Lugar::find($id);
-      $lugar->delete();
+      \smarttour\Lugar::destroy($id);
       return redirect('/');
     }
 

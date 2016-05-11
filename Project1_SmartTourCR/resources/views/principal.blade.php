@@ -200,13 +200,13 @@
         </a>
       </li>
       <li>
-        <a href="{!!URL::to("verLugares")!!}">
+        <a href="">
           <i class="pe-7s-map-marker"></i>
           <p>Atractivo</p>
         </a>
       </li>
       <li>
-        <a href="user.html">
+        <a href="{!!URL::to("verLugares")!!}">
           <i class="pe-7s-map"></i>
           <p>Lugar</p>
         </a>

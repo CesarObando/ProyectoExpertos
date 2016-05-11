@@ -6,11 +6,11 @@
   <h1>Modificar Lugar</h1>
 
   <label for="nombre">Nombre:</label>
-  <input type="text" class="form-control" name="nombre" required="">
+  <input type="text" class="form-control" name="nombre" required="" value= {{$lugar->nombre}}>
   <label for="latitud">Latitud:</label>
-  <input type="text" class="form-control" name="latitud" required="">
+  <input type="text" class="form-control" name="latitud" required="" value= {{$lugar->latitud}}>
   <label for="longitud">Longitud:</label>
-  <input type="text" class="form-control" name="longitud" required="">
+  <input type="text" class="form-control" name="longitud" required="" value= {{$lugar->longitud}}>
   <hr>
   <input type="submit" name="modificarLugar" value="modificar" class="btn-success btn-lg">
 {!!Form::close()!!}

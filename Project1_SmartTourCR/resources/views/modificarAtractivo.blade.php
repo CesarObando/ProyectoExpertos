@@ -55,7 +55,7 @@
     </select>
   </div>
   <hr>
-  <input type="submit" name="modificarAtractivo" value="Modificar" class="btn-success btn-lg">
+  <input type="submit" name="modificarAtractivo" value="Modificar" class="btn btn-warning btn-fill">
 {!!Form::close()!!}
 
 @stop

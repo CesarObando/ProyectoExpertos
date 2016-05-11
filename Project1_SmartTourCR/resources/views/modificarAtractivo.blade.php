@@ -1,3 +1,5 @@
+@extends('principal')
+@section('content')
 {!!Form::open(['route'=>'lugar.store','method'=>'post'])!!}
 
 <h1>Modificar Atractivo</h1>
@@ -55,3 +57,5 @@
   <hr>
   <input type="submit" name="modificarAtractivo" value="Modificar" class="btn-success btn-lg">
 {!!Form::close()!!}
+
+@stop

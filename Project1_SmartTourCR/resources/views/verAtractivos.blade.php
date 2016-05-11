@@ -1,3 +1,5 @@
+@extends('principal')
+@section('content')
 <div class="col-md-12">
 <div class="card">
 <div class="content table-responsive table-full-width">
@@ -49,3 +51,5 @@
             </div>
           </div>
         </div>
+
+        @stop

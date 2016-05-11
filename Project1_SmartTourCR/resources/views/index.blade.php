@@ -59,7 +59,7 @@
 
       </div>
       <div class="col-lg-6">
-      <div id="mapa" style="width: 1000px; height: 450px;"></div>
+      <div id="mapa" style="width: 680px; height: 450px;"></div>
     </div>
     </div>
   </div>

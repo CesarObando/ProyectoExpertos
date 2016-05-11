@@ -188,7 +188,7 @@
         </a>
       </li>
       <li>
-        <a href="">
+        <a href="{!!URL::to("verAtractivos")!!}">
           <i class="pe-7s-map-marker"></i>
           <p>Atractivo</p>
         </a>

@@ -7,7 +7,7 @@
                 <br>
                 <h1>Atractivos</h1>
                 <br>
-                <a href="#" class="btn btn-success btn-fill">Agregar +</a>
+                <a href="{!!URL::to("insertarAtractivo")!!}" class="btn btn-success btn-fill">Agregar +</a>
                 <hr>
                 <form>
                     <table class="table table-hover table-striped">
@@ -22,6 +22,7 @@
                                 <th>Clima</th>
                                 <th>Latitud</th>
                                 <th>Longitud</th>
+                                <th>Imagen</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -37,6 +38,7 @@
                                 <td>{{$atractivo->clima}}</td>
                                 <td>{{$atractivo->latitud}}</td>
                                 <td>{{$atractivo->longitud}}</td>
+                                <td><a href="#">Ver</a></td>
                                 <td>
                                   {!!link_to_route('atractivo.edit', $title = 'Modificar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
                                   {!!link_to_action('AtractivoController@destroy', $title = 'Eliminar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}

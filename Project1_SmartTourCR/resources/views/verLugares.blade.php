@@ -19,6 +19,7 @@
                                 <th>Nombre</th>
                                 <th>Latitud</th>
                                 <th>Longitud</th>
+                                <th>Imagen</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>

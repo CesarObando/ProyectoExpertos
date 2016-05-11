@@ -59,9 +59,9 @@ class AtractivoController extends Controller
     $atractivo->delete();
   }
 
-  public function listar()
+  public function verAtractivos()
   {
     $atractivos = \smarttour\Atractivo::All();
-    return view('listarAtractivos',compact('atractivos'));
+    return view('verAtractivos',compact('atractivos'));
   }
 }

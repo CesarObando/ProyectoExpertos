@@ -15,23 +15,22 @@ class AtractivoController extends Controller
 
   public function create()
   {
-    $lugares = \smarttour\Lugar::All();
-    return view ('insertarAtractivo',compact('lugares'));
+    return view ('insertarAtractivo');
   }
 
   public function store(Request $request)
   {
     \smarttour\Atractivo::create([
-    'idlugar' => $request['lugar'],
+    'idlugar' => $request['idlugar'],
     'nombre' => $request['nombre'],
     'duracion' => $request['duracion'],
     'tipoCamino' => $request['tipoCamino'],
     'precio' => $request['precio'],
     'distancia' => $request['distancia'],
     'clima' => $request['clima'],
-    'descripcion' => $request['descripcion'],
     'latitud' => $request['latitud'],
     'longitud' => $request['longitud'],
+    'rutaImagen'=> $request['rutaImagen'],
   ]);
   return view ('insertarAtractivo');
   }
@@ -44,7 +43,7 @@ class AtractivoController extends Controller
   public function edit($id)
   {
     $atractivo = \smarttour\Atractivo::find($id);
-    return view ('editarAtractivo',['atractivo'=>$atractivo]);
+    return view ('modificarAtractivo',['atractivo'=>$atractivo]);
   }
 
   public function update($id, Request $request)

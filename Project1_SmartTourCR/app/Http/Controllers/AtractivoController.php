@@ -22,7 +22,8 @@ class AtractivoController extends Controller
   public function store(Request $request)
   {
     \smarttour\Atractivo::create([
-    'idlugar' => $request['idlugar'],
+    'idlugar' => $request['lugar'],
+    //'idlugar' => 1,
     'nombre' => $request['nombre'],
     'duracion' => $request['duracion'],
     'tipoCamino' => $request['tipoCamino'],
@@ -30,7 +31,7 @@ class AtractivoController extends Controller
     'distancia' => $request['distancia'],
     'clima' => $request['clima'],
     'descripcion' => $request['descripcion'],
-    'rutaImagen' => $request['imagen'],
+    'rutaImagen' => $request['rutaImagen'],
     'latitud' => $request['latitud'],
     'longitud' => $request['longitud'],
   ]);

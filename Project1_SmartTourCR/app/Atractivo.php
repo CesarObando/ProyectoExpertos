@@ -13,7 +13,7 @@ class Atractivo extends Model
 
   public function setRutaImagenAttribute($rutaImagen){
     $this->attributes['rutaImagen'] = Carbon::now()->second.$rutaImagen->getClientOriginalName();
-    $name = Carbon::now()->second.$rutaImagen->getClientOriginalName();
+    $nombre = Carbon::now()->second.$rutaImagen->getClientOriginalName();
     \Storage::disk('local')->put($nombre, \File::get($rutaImagen));
     }
 }

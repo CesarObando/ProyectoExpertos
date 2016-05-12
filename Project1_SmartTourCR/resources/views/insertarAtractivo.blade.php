@@ -3,7 +3,7 @@
 
 <div class="content">
   <div class="container-fluid">
-{!!Form::open(['route'=>'atractivo.store','method'=>'post'])!!}
+{!!Form::open(['route'=>'atractivo.store','method'=>'post', 'files'=>true])!!}
 
 <h1>Agregar Atractivo</h1>
 

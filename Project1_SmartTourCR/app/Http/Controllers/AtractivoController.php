@@ -15,7 +15,8 @@ class AtractivoController extends Controller
 
   public function create()
   {
-    return view ('insertarAtractivo');
+    $lugares = \smarttour\Lugar::All();
+    return view ('insertarAtractivo',compact('lugares'));
   }
 
   public function store(Request $request)
@@ -28,14 +29,10 @@ class AtractivoController extends Controller
     'precio' => $request['precio'],
     'distancia' => $request['distancia'],
     'clima' => $request['clima'],
-<<<<<<< HEAD
     'descripcion' => $request['descripcion'],
     'rutaImagen' => $request['imagen'],
-=======
->>>>>>> 9dc63307c4aca0ce2af4c408a3b48eb233bafd4e
     'latitud' => $request['latitud'],
     'longitud' => $request['longitud'],
-    'rutaImagen'=> $request['rutaImagen'],
   ]);
   $lugares = \smarttour\Lugar::All();
   return view ('insertarAtractivo',compact('lugares'));

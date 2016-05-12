@@ -30,10 +30,12 @@ class AtractivoController extends Controller
     'distancia' => $request['distancia'],
     'clima' => $request['clima'],
     'descripcion' => $request['descripcion'],
+    'rutaImagen' => $request['imagen'],
     'latitud' => $request['latitud'],
     'longitud' => $request['longitud'],
   ]);
-  return view ('insertarAtractivo');
+  $lugares = \smarttour\Lugar::All();
+  return view ('insertarAtractivo',compact('lugares'));
   }
 
   public function show($id)

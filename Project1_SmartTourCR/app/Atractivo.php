@@ -8,5 +8,5 @@ class Atractivo extends Model
 {
   protected $table = 'atractivo';
   public $timestamps = false;
-  protected $fillable = ['idlugar','nombre','duracion','tipoCamino','precio','distancia','clima','latitud','longitud'];
+  protected $fillable = ['idlugar','nombre','duracion','tipoCamino','precio','distancia','clima','descripcion','latitud','longitud'];
 }

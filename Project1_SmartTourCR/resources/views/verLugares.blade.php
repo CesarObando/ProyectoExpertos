@@ -15,18 +15,15 @@
                     <table class="table table-hover table-striped">
                         <thead>
                             <tr>
-                                <th>ID</th>
                                 <th>Nombre</th>
                                 <th>Latitud</th>
                                 <th>Longitud</th>
-                                <th>Imagen</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
                         @foreach($lugares as $lugar)
                         <tbody>
                             <tr>
-                                <td>{{$lugar->id}}</td>
                                 <td>{{$lugar->nombre}}</td>
                                 <td>{{$lugar->latitud}}</td>
                                 <td>{{$lugar->longitud}}</td>

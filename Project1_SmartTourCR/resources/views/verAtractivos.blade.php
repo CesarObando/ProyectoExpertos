@@ -41,7 +41,7 @@
                                 <td><a href="#">Ver</a></td>
                                 <td>
                                   {!!link_to_route('atractivo.edit', $title = 'Modificar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
-                                  {!!link_to_action('AtractivoController@destroy', $title = 'Eliminar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}
+                                  {!!link_to_action('AtractivoController@eliminar', $title = 'Eliminar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}
                                 </td>
                             </tr>
                         </tbody>

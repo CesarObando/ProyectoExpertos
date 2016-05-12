@@ -1,6 +1,12 @@
 @extends('principal')
 @section('content')
+<<<<<<< HEAD
 {!!Form::model($atractivo,['route'=>['atractivo.update',$atractivo->id],'method'=>'PUT'])!!}
+=======
+<div class="content">
+  <div class="container-fluid">
+{!!Form::open(['route'=>'lugar.store','method'=>'post'])!!}
+>>>>>>> 7f8aa6a8fadddd7af6239e3f11f2d8372bb89051
 
 <h1>Modificar Atractivo</h1>
 
@@ -63,5 +69,6 @@
   <hr>
   <input type="submit" name="modificarAtractivo" value="Modificar" class="btn btn-warning btn-fill">
 {!!Form::close()!!}
-
+</div>
+</div>
 @stop

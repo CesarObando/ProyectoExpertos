@@ -3,7 +3,7 @@
 
 <div class="content">
   <div class="container-fluid">
-{!!Form::open(['route'=>'atractivo.store','method'=>'post'])!!}
+{!!Form::open(['route'=>'atractivo.store','method'=>'post', 'files'=>true])!!}
 
 <h1>Agregar Atractivo</h1>
 
@@ -47,8 +47,8 @@
   </select>
 </div>
 <div class="form-group">
-  <label for="imagen">Imagen</label>
-  <input type="file" class="form-control" name="imagen" >
+  <label for="rutaImagen">Imagen</label>
+  <input type="file" class="form-control" name="rutaImagen" >
 </div>
 <div class="form-group">
   <label>Descripcion</label>

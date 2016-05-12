@@ -47,8 +47,8 @@
   </select>
 </div>
 <div class="form-group">
-  <label for="imagen">Imagen</label>
-  <input type="file" class="form-control" name="imagen" >
+  <label for="rutaImagen">Imagen</label>
+  <input type="file" class="form-control" name="rutaImagen" >
 </div>
 <div class="form-group">
   <label>Descripcion</label>

@@ -47,7 +47,8 @@ class AtractivoController extends Controller
   public function edit($id)
   {
     $atractivo = \smarttour\Atractivo::find($id);
-    return view ('modificarAtractivo',['atractivo'=>$atractivo]);
+    $lugares = \smarttour\Lugar::All();
+    return view ('modificarAtractivo',['atractivo'=>$atractivo],compact('lugares'));
   }
 
   public function update($id, Request $request)
@@ -58,10 +59,10 @@ class AtractivoController extends Controller
     return redirect ('/');
   }
 
-  public function destroy($id)
+  public function eliminar($id)
   {
-    $atractivo = \smarttour\Atractivo::find($id);
-    $atractivo->delete();
+    \smarttour\Atractivo::destroy($id);
+    return redirect('/');
   }
 
   public function verAtractivos()

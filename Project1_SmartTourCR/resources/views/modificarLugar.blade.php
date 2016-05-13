@@ -5,14 +5,16 @@
 {!!Form::model($lugar,['route'=>['lugar.update',$lugar->id],'method'=>'PUT'])!!}
   <h1>Modificar Lugar</h1>
 
-  <label for="nombre">Nombre:</label>
-  <input type="text" class="form-control" name="nombre" required="" value= {{$lugar->nombre}}>
-  <label for="latitud">Latitud:</label>
-  <input type="text" class="form-control" name="latitud" required="" value= {{$lugar->latitud}}>
-  <label for="longitud">Longitud:</label>
-  <input type="text" class="form-control" name="longitud" required="" value= {{$lugar->longitud}}>
-  <hr>
-  <input type="submit" name="modificarLugar" value="modificar" class="btn btn-warning btn-fill">
+  {!!Form::label('nombre','Nombre:')!!}
+  {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Ingrese el nombre'])!!}
+
+  {!!Form::label('latitud','Latitud:')!!}
+  {!!Form::text('latitud',null,['class'=>'form-control','placeholder'=>'Ingrese la latitud'])!!}
+
+  {!!Form::label('longitud','Longitud:')!!}
+  {!!Form::text('longitud',null,['class'=>'form-control','placeholder'=>'Ingrese la longitud'])!!}
+
+  {!!Form::submit('Modificar',['class'=>'btn btn-warning btn-fill'])!!}
 {!!Form::close()!!}
 </div>
 </div>

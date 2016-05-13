@@ -8,6 +8,7 @@ use Session;
 use Redirect;
 use smarttour\Http\Requests;
 use smarttour\Http\Requests\LoginRequest;
+use smarttour\Http\Controllers\Controller;
 
 class LogController extends Controller
 {

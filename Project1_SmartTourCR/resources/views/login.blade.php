@@ -12,7 +12,7 @@
   {!!Form::text('email',null,['class'=>'form-control','placeholder'=>'Ingrese el correo'])!!}
 
   {!!Form::label('password','Password:')!!}
-  {!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingrese la latitud'])!!}
+  {!!Form::password('password',['class'=>'form-control','placeholder'=>'Ingrese la contrasena'])!!}
 
   {!!Form::submit('Iniciar sesion',['class'=>'btn btn-warning btn-fill'])!!}
 {!!Form::close()!!}

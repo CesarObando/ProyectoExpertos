@@ -176,7 +176,7 @@
 
     <ul class="nav">
       <li class="active">
-        <a href="{!!URL::to("principal")!!}">
+        <a href="{!!URL::to("/")!!}">
           <i class="pe-7s-home"></i>
           <p>Inicio</p>
         </a>

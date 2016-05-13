@@ -29,7 +29,7 @@
                         @foreach($atractivos as $atractivo)
                         <tbody>
                             <tr>
-                                <td>{{$atractivo->id_lugar}}</td>
+                                <td>{{$atractivo->nombreLugar}}</td>
                                 <td>{{$atractivo->nombre}}</td>
                                 <td>{{$atractivo->duracion}}</td>
                                 <td>{{$atractivo->tipoCamino}}</td>

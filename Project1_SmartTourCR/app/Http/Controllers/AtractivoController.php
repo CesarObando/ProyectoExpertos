@@ -66,7 +66,7 @@ class AtractivoController extends Controller
 
   public function verAtractivos()
   {
-    $atractivos = \smarttour\Atractivo::All();
+    $atractivos = \smarttour\Atractivo::Atractivos();
     return view('verAtractivos',compact('atractivos'));
   }
 }

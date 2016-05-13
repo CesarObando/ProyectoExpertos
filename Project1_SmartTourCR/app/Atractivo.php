@@ -21,7 +21,7 @@ class Atractivo extends Model
   public static function Atractivos(){
     return DB::table('atractivo')
         ->join('lugar','lugar.id','=','atractivo.idlugar')
-        ->select('atractivo.*','nombre.lugar')
+        ->select('atractivo.*','lugar.nombre as nombreLugar')
         ->get();
   }
 }

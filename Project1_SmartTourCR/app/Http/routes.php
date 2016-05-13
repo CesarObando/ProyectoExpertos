@@ -23,3 +23,5 @@ Route::resource('insertarAtractivo','AtractivoController@create');
 Route::get('verAtractivos','AtractivoController@verAtractivos');
 Route::get('eliminarAtractivo/{id}','AtractivoController@eliminar');
 Route::resource('atractivo','AtractivoController');
+
+Route::resource('log','LogController');

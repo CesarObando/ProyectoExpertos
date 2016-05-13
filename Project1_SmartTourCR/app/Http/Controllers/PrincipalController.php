@@ -11,7 +11,7 @@ class PrincipalController extends Controller
 
     public function index()
     {
-      return view('index');
+      return view('login');
     }
 
     public function quienesSomos()

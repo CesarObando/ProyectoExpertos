@@ -23,7 +23,6 @@ class AtractivoController extends Controller
   {
     \smarttour\Atractivo::create([
     'idlugar' => $request['lugar'],
-    //'idlugar' => 1,
     'nombre' => $request['nombre'],
     'duracion' => $request['duracion'],
     'tipoCamino' => $request['tipoCamino'],

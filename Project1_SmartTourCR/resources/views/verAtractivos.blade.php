@@ -38,7 +38,9 @@
                                 <td>{{$atractivo->clima}}</td>
                                 <td>{{$atractivo->latitud}}</td>
                                 <td>{{$atractivo->longitud}}</td>
-                                <td><a href="#">Ver</a></td>
+                                <td>
+                                    <img src="atractivos/{{$atractivo->rutaImagen}}" alt="" style="width:100px;"/>
+                                </td>
                                 <td>
                                   {!!link_to_route('atractivo.edit', $title = 'Modificar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-warning btn-fill'])!!}
                                   {!!link_to_action('AtractivoController@eliminar', $title = 'Eliminar', $parameters = $atractivo->id, $attributes = ['class'=>'btn btn-danger btn-fill'])!!}

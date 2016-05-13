@@ -4,6 +4,7 @@ namespace smarttour;
 
 use Illuminate\Database\Eloquent\Model;
 use Carbon\Carbon;
+use DB;
 
 class Atractivo extends Model
 {
@@ -16,4 +17,11 @@ class Atractivo extends Model
     $nombre = Carbon::now()->second.$rutaImagen->getClientOriginalName();
     \Storage::disk('local')->put($nombre, \File::get($rutaImagen));
     }
+
+  public static function Atractivos(){
+    return DB::table('atractivo')
+        ->join('lugar','lugar.id','=','atractivo.idlugar')
+        ->select('atractivo.*','nombre.lugar')
+        ->get();
+  }
 }

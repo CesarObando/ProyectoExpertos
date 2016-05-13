@@ -12,6 +12,7 @@
 */
 
 Route::get('/','PrincipalController@index');
+Route::get('quienesSomos','PrincipalController@quienesSomos');
 
 Route::resource('insertarLugar','LugarController@create');
 Route::get('verLugares','LugarController@verLugares');

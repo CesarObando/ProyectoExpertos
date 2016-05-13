@@ -14,4 +14,9 @@ class PrincipalController extends Controller
       return view('index');
     }
 
+    public function quienesSomos()
+    {
+      return view('quienesSomos');
+    }
+
 }

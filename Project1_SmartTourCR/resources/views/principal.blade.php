@@ -176,13 +176,13 @@
 
     <ul class="nav">
       <li class="active">
-        <a href="dashboard.html">
+        <a href="{!!URL::to("principal")!!}">
           <i class="pe-7s-home"></i>
           <p>Inicio</p>
         </a>
       </li>
       <li>
-        <a href="user.html">
+        <a href="{!!URL::to("quienesSomos")!!}">
           <i class="pe-7s-user"></i>
           <p>Quienes somos?</p>
         </a>

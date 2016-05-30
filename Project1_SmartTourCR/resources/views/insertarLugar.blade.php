@@ -136,11 +136,12 @@ function geocode() {
 
 function geocodeResult(results, status) {
 
-  if (status == 'OK' && results.length > 0) {
+//  if (status == 'OK' && results.length > 0) {
     map.fitBounds(results[0].geometry.viewport);
-  } else {
-    alert("Geocode was not successful for the following reason: " + status);
-  }
+    centerChanged();
+//  } else {
+//    alert("Geocode was not successful for the following reason: " + status);
+//  }
 
 }
 

@@ -25,7 +25,7 @@ class LugarController extends Controller
       'latitud' => $request['latitud'],
       'longitud' => $request['longitud'],
     ]);
-    return view ('insertarLugar');
+    return view ('verLugares');
     }
 
     public function show($id)
@@ -50,7 +50,7 @@ class LugarController extends Controller
     public function eliminar($id)
     {
       \smarttour\Lugar::destroy($id);
-      return redirect('/');
+      return redirect('verLugares');
     }
 
     public function verLugares()

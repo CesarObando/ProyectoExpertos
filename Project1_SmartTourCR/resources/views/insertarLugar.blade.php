@@ -8,7 +8,7 @@
         <h1>Agregar Lugar</h1>
 
         <label for="nombre">Nombre:</label>
-        <input type="text" class="form-control" name="nombre" required="">
+        <input type="text" class="form-control" name="nombre" id="nombre" required="">
         <label for="latitud">Latitud:</label>
         <input type="text" class="form-control" name="lat" id="lat" readonly="">
         <label for="longitud">Longitud:</label>
@@ -96,6 +96,7 @@ function centerChanged() {
   var lng = map.getCenter().lng();
   document.getElementById('lat').value = lat;
   document.getElementById('lng').value = lng;
+  document.getElementById('nombre').value = document.getElementById('address').value;
   reverseGeocode();
 
 }
@@ -126,7 +127,6 @@ function reverseGeocodeResult(results, status) {
 function geocode() {
 
   var address = document.getElementById("address").value;
-
   geocoder.geocode({
     'address': address,
     'partialmatch': true

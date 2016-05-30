@@ -10,7 +10,7 @@ class Atractivo extends Model
 {
   protected $table = 'atractivo';
   public $timestamps = false;
-  protected $fillable = ['idlugar','nombre','duracion','tipoCamino','precio','distancia','clima','descripcion','rutaImagen','latitud','longitud'];
+  protected $fillable = ['idlugar','nombre','duracion','tipoCamino','precio','clima','descripcion','rutaImagen','latitud','longitud'];
 
   public function setRutaImagenAttribute($rutaImagen){
     $this->attributes['rutaImagen'] = Carbon::now()->second.$rutaImagen->getClientOriginalName();

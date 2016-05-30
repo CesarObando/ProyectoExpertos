@@ -27,7 +27,6 @@ class AtractivoController extends Controller
     'duracion' => $request['duracion'],
     'tipoCamino' => $request['tipoCamino'],
     'precio' => $request['precio'],
-    'distancia' => $request['distancia'],
     'clima' => $request['clima'],
     'descripcion' => $request['descripcion'],
     'rutaImagen' => $request['rutaImagen'],
@@ -55,13 +54,13 @@ class AtractivoController extends Controller
     $atractivo = \smarttour\Atractivo::find($id);
     $atractivo->fill($request->all());
     $atractivo->save();
-    return redirect ('/');
+    return redirect ('verAtractivos');
   }
 
   public function eliminar($id)
   {
     \smarttour\Atractivo::destroy($id);
-    return redirect('/');
+    return redirect('verAtractivos');
   }
 
   public function verAtractivos()

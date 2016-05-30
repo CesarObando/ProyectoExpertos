@@ -18,7 +18,6 @@
                                 <th>Duración</th>
                                 <th>Tipo de camino</th>
                                 <th>Precio</th>
-                                <th>Distancia</th>
                                 <th>Clima</th>
                                 <th>Latitud</th>
                                 <th>Longitud</th>
@@ -34,7 +33,6 @@
                                 <td>{{$atractivo->duracion}}</td>
                                 <td>{{$atractivo->tipoCamino}}</td>
                                 <td>{{$atractivo->precio}}</td>
-                                <td>{{$atractivo->distancia}}</td>
                                 <td>{{$atractivo->clima}}</td>
                                 <td>{{$atractivo->latitud}}</td>
                                 <td>{{$atractivo->longitud}}</td>

@@ -68,7 +68,7 @@
       title:"La avispa",
       animation: google.maps.Animation.DROP,
     });
-//San Jose
+    //San Jose
     markers[4] = new google.maps.Marker({
       position: new google.maps.LatLng(10.014801, -84.213655),
       title:"Parque Juan Santamaria",
@@ -89,8 +89,8 @@
       title:"Carnes Y Parrillas",
       animation: google.maps.Animation.DROP,
     });
-//Alajuela
-  	markers[8] = new google.maps.Marker({
+    //Alajuela
+    markers[8] = new google.maps.Marker({
       position: new google.maps.LatLng(9.826962, -83.868484),
       title:"UCR",
       animation: google.maps.Animation.DROP
@@ -110,7 +110,7 @@
       title:"Ujarras",
       animation: google.maps.Animation.DROP,
     });
-//cartago
+    //cartago
     markers[12] = new google.maps.Marker({
       position: new google.maps.LatLng(10.572534, -85.697610),
       title:"Playa la penca",
@@ -131,7 +131,7 @@
       title:"Playa Matapalo",
       animation: google.maps.Animation.DROP
     });
-//Guanacaste
+    //Guanacaste
   }
 
   function ponerMarcadores(){
@@ -139,19 +139,19 @@
     var infowindow;
     lugar = document.getElementById('lugar').value;
     for (var i = lugar*4; i <= ((lugar*4)+3); i++) {
-          markers[i].setMap(map);
+      markers[i].setMap(map);
     }
     for (var i = lugar*4; i <= ((lugar*4)+3); i++) {
-        markers[i].addListener('click', function(){
-          infowindow = new google.maps.InfoWindow({
-            content:"Sitio Turistico Recomendado Por SmartTourCR",
-            position: new google.maps.LatLng(markers[i-1].position.lat(), markers[i-1].position.lng())
-          });
-          infowindow.open(map, markers[i]);
+      markers[i].addListener('click', function(){
+        infowindow = new google.maps.InfoWindow({
+          content:"Sitio Turistico Recomendado Por SmartTourCR",
+          position: new google.maps.LatLng(markers[i-1].position.lat(), markers[i-1].position.lng())
         });
-      }
+        infowindow.open(map, markers[i]);
+      });
+    }
   }
-</script>
+  </script>
 
 
 
@@ -215,44 +215,44 @@
       </ul>
     </div>
 
-</nav>
+  </nav>
 
 
-@yield('content')
+  @yield('content')
 
 
 
-    <footer class="footer">
-      <div class="container-fluid">
-        <nav class="pull-left">
-          <ul>
-            <li>
-              <a href="#">
-                Home
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Company
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Portfolio
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                Blog
-              </a>
-            </li>
-          </ul>
-        </nav>
-        <p class="copyright pull-right">
-          &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
-        </p>
-      </div>
-    </footer>
+  <footer class="footer">
+    <div class="container-fluid">
+      <nav class="pull-left">
+        <ul>
+          <li>
+            <a href="#">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Company
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Portfolio
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              Blog
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="copyright pull-right">
+        &copy; 2016 <a href="http://www.creative-tim.com">Creative Tim</a>, made with love for a better web
+      </p>
+    </div>
+  </footer>
 </div>
 </div>
 

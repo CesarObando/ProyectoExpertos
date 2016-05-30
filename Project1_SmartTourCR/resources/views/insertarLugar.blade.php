@@ -10,9 +10,9 @@
         <label for="nombre">Nombre:</label>
         <input type="text" class="form-control" name="nombre" id="nombre" required="">
         <label for="latitud">Latitud:</label>
-        <input type="text" class="form-control" name="lat" id="lat" readonly="">
+        <input type="text" class="form-control" name="latitud" id="latitud" readonly="">
         <label for="longitud">Longitud:</label>
-        <input type="text" class="form-control" name="lng" id="lng" readonly="">
+        <input type="text" class="form-control" name="longitud" id="longitud" readonly="">
 
         <hr>
         <input type="submit" name="insertarLugar" value="Insertar" class="btn btn-success btn-fill">
@@ -20,8 +20,8 @@
       </div>
       <div class="col-lg-6">
         <ul>
-          <input type="text" id="address" placeholder="Escribe aquí tu lugar..." value="" class="input" />
-          <input type="button" value="Buscar" onclick="geocode()" class="button" />
+          <input type="text" id="address" placeholder="Escribe aquí tu lugar..." value="" class="form-control" />
+          <input type="button" value="Buscar" onclick="geocode()" class="btn btn-success btn-fill" />
           <span id="formatedAddress">...</span>
         </ul>
         <div id="mapa" style="width: 680px; height: 450px;"></div>
@@ -94,8 +94,8 @@ function centerChanged() {
   var latlng = getCenterLatLngText();
   var lat = map.getCenter().lat();
   var lng = map.getCenter().lng();
-  document.getElementById('lat').value = lat;
-  document.getElementById('lng').value = lng;
+  document.getElementById('latitud').value = lat;
+  document.getElementById('longitud').value = lng;
   document.getElementById('nombre').value = document.getElementById('address').value;
   reverseGeocode();
 

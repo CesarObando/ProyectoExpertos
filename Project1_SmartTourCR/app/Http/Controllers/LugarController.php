@@ -44,7 +44,7 @@ class LugarController extends Controller
       $lugar = \smarttour\Lugar::find($id);
       $lugar->fill($request->all());
       $lugar->save();
-      return redirect ('/');
+      return redirect ('verLugares');
     }
 
     public function eliminar($id)

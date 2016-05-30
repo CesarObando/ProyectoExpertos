@@ -55,14 +55,14 @@
               <option value="3">Caliente</option>
             </select>
           </div>
-          
+
           <input type="submit" name="buscar" value="Buscar" class="btn btn-info btn-fill pull-right">
         </form>
 
       </div>
       <div class="col-lg-6">
-      <div id="mapa" style="width: 680px; height: 450px;"></div>
-    </div>
+        <div id="mapa" style="width: 680px; height: 450px;"></div>
+      </div>
     </div>
   </div>
 </div>

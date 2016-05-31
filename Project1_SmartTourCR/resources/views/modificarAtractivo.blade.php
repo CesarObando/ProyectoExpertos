@@ -27,9 +27,8 @@
 
       {!!Form::label('tipoCamino','Tipo de camino:')!!}
       {!!Form::select('tipoCamino', ['a'=>'Asfaltado',
-      'b' => 'Pedregoso',
-      'c' => 'Lastre',
-      'd'=>'Barro'],null,['class'=>'form-control',
+      'b' => 'Lastre',
+      'c' => 'Barro'],null,['class'=>'form-control',
       'placeholder'=>'Seleccione el tipo de camino'])!!}
 
       {!!Form::label('duracion','Duración (Horas):')!!}

@@ -31,9 +31,8 @@
         <label>Tipo de camino</label>
         <select name="tipoCamino" id="tipoCamino" class="form-control" tabindex="9">
           <option value="a">Asfaltado</option>
-          <option value="b">Pedregoso</option>
-          <option value="c">Lastre</option>
-          <option value="d">Barro</option>
+          <option value="b">Lastre</option>
+          <option value="c">Barro</option>
         </select>
       </div>
 

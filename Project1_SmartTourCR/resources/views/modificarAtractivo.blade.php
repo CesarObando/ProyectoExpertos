@@ -3,7 +3,7 @@
 <div class="content">
   <div class="container-fluid">
     <div class="col-lg-4">
-      {!!Form::model($atractivo,['route'=>['atractivo.update',$atractivo->id],'method'=>'PUT'])!!}
+      {!!Form::model($atractivo,['route'=>['atractivo.update',$atractivo->id],'method'=>'PUT','files'=>true])!!}
 
       <h1>Modificar Atractivo</h1>
 
@@ -45,7 +45,7 @@
       'Caliente'=>'Caliente'],null,['class'=>'form-control',
       'placeholder'=>'Seleccione el clima'])!!}
 
-      {!!Form::file('imagen')!!}
+      {!!Form::file('rutaImagen')!!}
 
       {!!Form::label('descripcion','Descripcion:')!!}
       {!!Form::text('descripcion',null,['class'=>'form-control','placeholder'=>'Ingrese la descripcion'])!!}

@@ -280,7 +280,7 @@
 <!-- Light Bootstrap Table DEMO methods, don't include it in your project! -->
 <script src="js/demo.js"></script>
 
-<script type="text/javascript">
+<!--<script type="text/javascript">
 $(document).ready(function(){
 
   demo.initChartist();
@@ -295,6 +295,6 @@ $(document).ready(function(){
   });
 
 });
-</script>
+</script>-->
 
 </html>

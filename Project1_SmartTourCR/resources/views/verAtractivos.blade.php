@@ -30,10 +30,39 @@
                             <tr>
                                 <td>{{$atractivo->nombreLugar}}</td>
                                 <td>{{$atractivo->nombre}}</td>
-                                <td>{{$atractivo->duracion}}</td>
-                                <td>{{$atractivo->tipoCamino}}</td>
-                                <td>{{$atractivo->precio}}</td>
-                                <td>{{$atractivo->clima}}</td>
+                                @if($atractivo->duracion == 'a')
+                                <!--<td>{{$atractivo->duracion}}</td>-->
+                                <td>De 0 a 1</td>
+                                @elseif($atractivo->duracion == 'b')
+                                <td>De 1 a 3</td>
+                                @else
+                                <td>3 o más</td>
+                                @endif
+
+                                @if($atractivo->tipoCamino == 'a')
+                                <td>Alfaltado</td>
+                                @elseif($atractivo->tipoCamino == 'b')
+                                <td>Lastre</td>
+                                @else
+                                <td>Barro</td>
+                                @endif
+
+                                @if($atractivo->precio == 'a')
+                                <td>0 a 2000</td>
+                                @elseif($atractivo->precio == 'b')
+                                <td>2000 a 5000</td>
+                                @else
+                                <td>5000 o más</td>
+                                @endif
+
+                                @if($atractivo->clima == 'a')
+                                <td>Frío</td>
+                                @elseif($atractivo->clima == 'b')
+                                <td>Lluvioso</td>
+                                @else
+                                <td>Soleado</td>
+                                @endif
+
                                 <td>{{$atractivo->latitud}}</td>
                                 <td>{{$atractivo->longitud}}</td>
                                 <td>

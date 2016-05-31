@@ -11,7 +11,7 @@
       {!!Form::text('nombre',null,['class'=>'form-control','placeholder'=>'Ingrese el nombre'])!!}
 
       <label>Lugar</label>
-      <select name="lugar" id="lugar" class="form-control" tabindex="9">
+      <select name="idlugar" id="lugar" class="form-control">
         @foreach($lugares as $lugar)
         <option value="{{$lugar->id}}">{{$lugar->nombre}}</option>
         @endforeach

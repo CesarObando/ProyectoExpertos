@@ -26,10 +26,10 @@
 
 
       {!!Form::label('tipoCamino','Tipo de camino:')!!}
-      {!!Form::select('tipoCamino', ['Asfaltado'=>'Asfaltado',
-      'Pedregoso' => 'Pedregoso',
-      'Lastre' => 'Lastre',
-      'Barro'=>'Barro'],null,['class'=>'form-control',
+      {!!Form::select('tipoCamino', ['a'=>'Asfaltado',
+      'b' => 'Pedregoso',
+      'c' => 'Lastre',
+      'd'=>'Barro'],null,['class'=>'form-control',
       'placeholder'=>'Seleccione el tipo de camino'])!!}
 
       {!!Form::label('duracion','Duración (Horas):')!!}
@@ -39,10 +39,9 @@
       'placeholder'=>'Seleccione la duración'])!!}
 
       {!!Form::label('clima','Clima:')!!}
-      {!!Form::select('clima', ['Frío'=>'Frío',
-      'Lluvioso' => 'Lluvioso',
-      'Soleado' => 'Soleado',
-      'Caliente'=>'Caliente'],null,['class'=>'form-control',
+      {!!Form::select('clima', ['a'=>'Frío',
+      'b' => 'Lluvioso',
+      'c' => 'Soleado'],null,['class'=>'form-control',
       'placeholder'=>'Seleccione el clima'])!!}
 
       {!!Form::file('rutaImagen')!!}

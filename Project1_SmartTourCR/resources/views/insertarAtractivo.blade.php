@@ -30,10 +30,10 @@
       <div class="form-group">
         <label>Tipo de camino</label>
         <select name="tipoCamino" id="tipoCamino" class="form-control" tabindex="9">
-          <option value="Asfaltado">Asfaltado</option>
-          <option value="Pedregoso">Pedregoso</option>
-          <option value="Lastre">Lastre</option>
-          <option value="Barro">Barro</option>
+          <option value="a">Asfaltado</option>
+          <option value="b">Pedregoso</option>
+          <option value="c">Lastre</option>
+          <option value="d">Barro</option>
         </select>
       </div>
 
@@ -49,10 +49,9 @@
       <div class="form-group">
         <label>Clima</label>
         <select name="clima" id="clima" class="form-control" tabindex="9">
-          <option value="Frío">Frío</option>
-          <option value="Lluvioso">Lluvioso</option>
-          <option value="Soleado">Soleado</option>
-          <option value="Caliente">Caliente</option>
+          <option value="a">Frío</option>
+          <option value="b">Lluvioso</option>
+          <option value="c">Soleado</option>
         </select>
       </div>
       <div class="form-group">

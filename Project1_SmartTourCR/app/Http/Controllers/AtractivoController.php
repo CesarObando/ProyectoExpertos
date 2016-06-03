@@ -37,11 +37,9 @@ class AtractivoController extends Controller
   return view ('insertarAtractivo',compact('lugares'));
   }
 
-  public function show(Request $request)
+  public function show()
   {
-    $idLugar = 0;
-    echo($request['duracion']." Hola");
-    DB::select('CALL bayes()');
+
   }
 
   public function edit($id)
@@ -69,17 +67,6 @@ class AtractivoController extends Controller
   {
     $atractivos = \smarttour\Atractivo::Atractivos();
     return view('verAtractivos',compact('atractivos'));
-  }
-
-  public function sugerirAtractivo(Request $request)
-  {
-      $idLugar = 0;
-      echo($request['duracion']." Hola");
-      DB::select('CALL bayes()');
-      //DB::select('CALL bayes7(?,?,?,?,?)',[$request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio'],0]);
-      //$idLugar = DB::select('select @_idLugar');
-
-      //return view('quienesSomos');
   }
 
 }

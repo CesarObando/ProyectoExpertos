@@ -26,9 +26,9 @@ class PrincipalController extends Controller
     {
         $idLugar = 0;
         //DB::select('CALL bayes()');
-        $idLugar = DB::select('CALL bayes7(?,?,?,?,@idLugar)',[$request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio'],0]);
+        $resultado = DB::select('CALL bayes7(?,?,?,?,@)',[$request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio'],$idLugar]);
         //$idLugar = DB::select('select _idLugar');
-        print_r($idLugar);
+        print_r($resultado);
 
         //return view('quienesSomos');
     }

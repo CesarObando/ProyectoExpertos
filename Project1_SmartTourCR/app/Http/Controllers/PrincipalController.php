@@ -25,10 +25,10 @@ class PrincipalController extends Controller
     public function store(Request $request)
     {
         $idLugar = 0;
-        //DB::select('CALL bayes()');
-        $resultado = DB::select('CALL bayes7(?,?,?,?,@)',[$request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio'],$idLugar]);
-        //$idLugar = DB::select('select _idLugar');
-        print_r($resultado);
+
+        $result = DB::statement('CALL bayes7(?,?,?,?,@idlugar)',array($request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio']));
+        $idLugar = DB::select('select @idlugar as idlugar');
+        print_r($idLugar[0]->idlugar);
 
         //return view('quienesSomos');
     }

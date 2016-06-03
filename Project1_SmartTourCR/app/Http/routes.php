@@ -13,6 +13,8 @@
 
 Route::get('/','PrincipalController@index');
 Route::get('quienesSomos','PrincipalController@quienesSomos');
+Route::get('sugerirAtractivo', 'PrincipalController@sugerirAtractivo');
+Route::resource('principal','PrincipalController');
 
 Route::resource('insertarLugar','LugarController@create');
 Route::get('verLugares','LugarController@verLugares');

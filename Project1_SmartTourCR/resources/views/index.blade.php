@@ -4,61 +4,55 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-4">
-        <form role="form">
+        {!!Form::open(['route'=>'principal.store','method'=>'post'])!!}
 
           <div class="form-group">
             <label>Lugar</label>
-            <select name="lugar" id="lugar" class="form-control" tabindex="9" onchange="ponerMarcadores()">
-              <option value="0">San José</option>
-              <option value="1">Alajuela</option>
-              <option value="2">Cartago</option>
-              <option value="3">Guanacaste</option>
+            <select name="lugar" id="lugar" class="form-control" tabindex="9">
+              @foreach($lugares as $lugar)
+              <option value="{{$lugar->id}}">{{$lugar->nombre}}</option>
+              @endforeach
             </select>
           </div>
 
           <div class="form-group">
-            <label>Precio</label>
-            <select name="lugar" id="lugar" class="form-control" tabindex="9">
-              <option value="0">Gratis</option>
-              <option value="1">1000-5000 colones</option>
-              <option value="2">5000-10000 colones</option>
-              <option value="3">10000-15000 colones</option>
+            <label>Precio por persona (Colones)</label>
+            <select name="precio" id="precio" class="form-control" tabindex="9">
+              <option value="a">0-2000</option>
+              <option value="b">2000-5000</option>
+              <option value="c">Más de 5000</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Tipo de camino</label>
-            <select name="lugar" id="lugar" class="form-control" tabindex="9">
-              <option value="0">Asfaltado</option>
-              <option value="1">Pedregoso</option>
-              <option value="2">Lastre</option>
-              <option value="3">Barro</option>
+            <select name="tipoCamino" id="tipoCamino" class="form-control" tabindex="9">
+              <option value="a">Asfaltado</option>
+              <option value="b">Lastre</option>
+              <option value="c">Barro</option>
             </select>
           </div>
 
           <div class="form-group">
-            <label>Duracion</label>
-            <select name="lugar" id="lugar" class="form-control" tabindex="9">
-              <option value="0">Menos de 1 hora</option>
-              <option value="1">1-2 horas</option>
-              <option value="2">2-3 horas</option>
-              <option value="3">3-4 horas</option>
+            <label>Duración (Horas)</label>
+            <select name="duracion" id="duracion" class="form-control" tabindex="9">
+              <option value="a">0-1</option>
+              <option value="b">1-3</option>
+              <option value="c">Más de 3</option>
             </select>
           </div>
 
           <div class="form-group">
             <label>Clima</label>
-            <select name="lugar" id="lugar" class="form-control" tabindex="9">
-              <option value="0">Frío</option>
-              <option value="1">Lluvioso</option>
-              <option value="2">Soleado</option>
-              <option value="3">Caliente</option>
+            <select name="clima" id="clima" class="form-control" tabindex="9">
+              <option value="a">Frío</option>
+              <option value="b">Lluvioso</option>
+              <option value="c">Soleado</option>
             </select>
           </div>
 
-          <input type="submit" name="buscar" value="Buscar" class="btn btn-info btn-fill pull-right">
-        </form>
-
+<input type="submit" name="buscar" value="Buscar" class="btn btn-success btn-fill">
+        {!!Form::close()!!}
       </div>
       <div class="col-lg-6">
         <div id="mapa" style="width: 680px; height: 450px;"></div>

@@ -33,6 +33,7 @@
   var timeouts = 0;
   var max = 101;
   var geocodeWait = 1000; //wait a second betweeen requests
+  
 
 
   function initialize()
@@ -48,6 +49,8 @@
   }
 
   function poblarMarcadores(){
+
+
     markers[0] = new google.maps.Marker({
       position: new google.maps.LatLng(9.941277, -84.079529),
       title:"Museo de los Niños",

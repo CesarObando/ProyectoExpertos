@@ -4,8 +4,7 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col-lg-4">
-        {!!Form::open(['route'=>'principal.store','method'=>'post'])!!}
-
+        <form method="post">
           <div class="form-group">
             <label>Lugar</label>
             <select name="lugar" id="lugar" class="form-control" tabindex="9">
@@ -51,8 +50,8 @@
             </select>
           </div>
 
-<input type="submit" name="buscar" value="Buscar" class="btn btn-success btn-fill">
-        {!!Form::close()!!}
+          <input type="submit" name="buscar" value="Buscar" class="btn btn-success btn-fill">
+        </form>
       </div>
       <div class="col-lg-6">
         <div id="mapa" style="width: 680px; height: 450px;"></div>
@@ -60,4 +59,22 @@
     </div>
   </div>
 </div>
+
+
+
+<?php
+$link = mysqli_connect('163.178.107.130', 'adm', 'saucr.092','smarttour');
+$result = mysqli_prepare($link,'CALL bayes7(?,?,?,?,@idlugar)');
+mysqli_stmt_bind_param($result, $_POST['clima']);
+mysqli_stmt_bind_param($result, $_POST['duracion']);
+mysqli_stmt_bind_param($result, $_POST['tipoCamino']);
+mysqli_stmt_bind_param($result, $_POST['precio']);
+mysqli_stmt_bind_param($result, 0);
+mysqli_stmt_execute($result);
+$idLugar = mysqli_query($link,'select @idlugar as idlugar');
+$idLugar = $idLugar[0]->idlugar;
+print_r($idLugar);
+$result = mysqli_query($link, 'select * from atractivo where idlugar ='.$idLugar.' and latitud != 0');
+print_r($result);
+?>
 @stop

@@ -28,9 +28,11 @@ class PrincipalController extends Controller
 
         $result = DB::statement('CALL bayes7(?,?,?,?,@idlugar)',array($request['clima'],$request['duracion'],$request['tipoCamino'],$request['precio']));
         $idLugar = DB::select('select @idlugar as idlugar');
-        print_r($idLugar[0]->idlugar);
-
-        //return view('quienesSomos');
+        $idLugar = $idLugar[0]->idlugar;
+        print_r($idLugar);
+        $result = DB::select('select * from atractivo where idlugar ='.$idLugar.' and latitud != 0');
+        print_r($result);
+        return $result;
     }
 
 }

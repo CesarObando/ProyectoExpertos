@@ -63,18 +63,11 @@
 
 
 <?php
-$link = mysqli_connect('163.178.107.130', 'adm', 'saucr.092','smarttour');
-$result = mysqli_prepare($link,'CALL bayes7(?,?,?,?,@idlugar)');
-mysqli_stmt_bind_param($result, $_POST['clima']);
-mysqli_stmt_bind_param($result, $_POST['duracion']);
-mysqli_stmt_bind_param($result, $_POST['tipoCamino']);
-mysqli_stmt_bind_param($result, $_POST['precio']);
-mysqli_stmt_bind_param($result, 0);
-mysqli_stmt_execute($result);
-$idLugar = mysqli_query($link,'select @idlugar as idlugar');
-$idLugar = $idLugar[0]->idlugar;
-print_r($idLugar);
-$result = mysqli_query($link, 'select * from atractivo where idlugar ='.$idLugar.' and latitud != 0');
-print_r($result);
+$pdo = new PDO('mysql:dbname=smarttour;host=163.178.107.130', 'adm', 'saucr.092');
+$data = $pdo->query("call bayes7('a','a','a','a', @lugar);")->fetchAll(PDO::FETCH_ASSOC);
+$total_count = $pdo->query("select @lugar;")->fetchAll(PDO::FETCH_ASSOC);
+
+print_r($total_count[0]);
+
 ?>
 @stop

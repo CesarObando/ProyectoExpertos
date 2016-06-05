@@ -3,8 +3,7 @@
 <div class="content">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-lg-4">
-        <form method="post">
+        {!!Form::open(['route'=>'principal.store','method'=>'post', 'files'=>true])!!}
           <div class="form-group">
             <label>Lugar</label>
             <select name="lugar" id="lugar" class="form-control" tabindex="9">
@@ -51,23 +50,49 @@
           </div>
 
           <input type="submit" name="buscar" value="Buscar" class="btn btn-success btn-fill">
-        </form>
-      </div>
-      <div class="col-lg-6">
-        <div id="mapa" style="width: 680px; height: 450px;"></div>
-      </div>
+        {!!Form::close()!!}
+
     </div>
   </div>
 </div>
 
+<script >
+/*
+
+function sugerirAtractivo(){
+
+$('#sugeriratractivo').submit(function(event) {
+        //Ocultamos nuevamente el form final si recarga el botón
+        //$("#resultadoRecinto").toggle();
+        //Prevenimos el funcionamiento por defecto del submit
+        event.preventDefault();
+        //Obtenemos los parametros
+        var clima =  document.getElementById('clima').value;
+        var duracion = document.getElementById('duracion').value;
+        var tipoCamino = document.getElementById('tipoCamino').value;
+        var precio = document.getElementById('precio').value;
+        document.getElementById('precio').value = 'b';
+        //Utilizamos ajax para enviar la petición
+        $.ajax({
+           type: "POST",
+           dataType: "jsonp",
+           url: 'http://www.smarttourcr.esy.es/WSSmartTour/GetDatos.php',
+           data: {
+                'clima': clima,
+                'duracion': duracion,
+                'tipoCamino': tipoCamino,
+                'precio': precio
+           },
+           dataType: 'json',
+
+           success: function(data)
+           {
+             $("#resultado").html(data);
+           }
+         });
+    });
+}*/
+</script>
 
 
-<?php
-$pdo = new PDO('mysql:dbname=smarttour;host=163.178.107.130', 'adm', 'saucr.092');
-$data = $pdo->query("call bayes7('a','a','a','a', @lugar);")->fetchAll(PDO::FETCH_ASSOC);
-$total_count = $pdo->query("select @lugar;")->fetchAll(PDO::FETCH_ASSOC);
-
-print_r($total_count[0]);
-
-?>
 @stop

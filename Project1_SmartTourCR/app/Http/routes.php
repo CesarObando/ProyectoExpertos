@@ -12,8 +12,8 @@
 */
 
 Route::get('/','PrincipalController@index');
+Route::get('atractivoSugerido','PrincipalController@sugerirAtractivo');
 Route::get('quienesSomos','PrincipalController@quienesSomos');
-Route::get('sugerirAtractivo', 'PrincipalController@sugerirAtractivo');
 Route::resource('principal','PrincipalController');
 
 Route::resource('insertarLugar','LugarController@create');

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="icon" type="image/png" href="assets/img/favicon.ico">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
   <title>SmartTourCR</title>
 
@@ -19,7 +19,7 @@
   {!!Html::style("http://fonts.googleapis.com/css?family=Roboto:400,700,300")!!}
 
 
-  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyAgFFn99x1e9TrjqmMXsoSLeuibt7L-IMc"></script>
+  <script type="text/javascript" src="http://maps.google.com/maps/api/js?key=AIzaSyCa9WLI7LVnM_xRTAribEwIx_KTTdSYKHI"></script>
 
   <script type="text/javascript">
 
@@ -33,7 +33,7 @@
   var timeouts = 0;
   var max = 101;
   var geocodeWait = 1000; //wait a second betweeen requests
-  
+
 
 
   function initialize()
@@ -50,110 +50,27 @@
 
   function poblarMarcadores(){
 
-
+  var latitud = +document.getElementById('latitud').value;
+  var longitud = +document.getElementById('longitud').value;
+  document.getElementById('latitud').value = longitud;
+  document.getElementById('longitud').value = latitud;
     markers[0] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.941277, -84.079529),
-      title:"Museo de los Niños",
+      position: new google.maps.LatLng(latitud, longitud),
+      title:"Test",
       animation: google.maps.Animation.DROP
     });
-    markers[1] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.934662, -84.081771),
-      title:"Mercado Central",
-      animation: google.maps.Animation.DROP
+    markers[0].setMap(map);
+    var infowindow;
+    markers[0].addListener('click', function(){
+    infowindow = new google.maps.InfoWindow({
+    content:"Sitio Turistico Recomendado Por SmartTourCR",
+    position: new google.maps.LatLng(markers[0].position.lat(), markers[0].position.lng())
     });
-    markers[2] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.933045, -84.084432),
-      title:"Parque La Merced",
-      animation: google.maps.Animation.DROP
+    infowindow.open(map, markers[i]);
     });
-    markers[3] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.930086, -84.078467),
-      title:"La avispa",
-      animation: google.maps.Animation.DROP,
-    });
-    //San Jose
-    markers[4] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.014801, -84.213655),
-      title:"Parque Juan Santamaria",
-      animation: google.maps.Animation.DROP
-    });
-    markers[5] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.016027, -84.215865),
-      title:"Mercado Central",
-      animation: google.maps.Animation.DROP
-    });
-    markers[6] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.021519, -84.209331),
-      title:"Estadio",
-      animation: google.maps.Animation.DROP
-    });
-    markers[7] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.025027, -84.217421),
-      title:"Carnes Y Parrillas",
-      animation: google.maps.Animation.DROP,
-    });
-    //Alajuela
-    markers[8] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.826962, -83.868484),
-      title:"UCR",
-      animation: google.maps.Animation.DROP
-    });
-    markers[9] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.836180, -83.841415),
-      title:"Mirador Ujarras",
-      animation: google.maps.Animation.DROP
-    });
-    markers[10] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.840485, -83.866375),
-      title:"Paraíso",
-      animation: google.maps.Animation.DROP
-    });
-    markers[11] = new google.maps.Marker({
-      position: new google.maps.LatLng(9.827366, -83.829741),
-      title:"Ujarras",
-      animation: google.maps.Animation.DROP,
-    });
-    //cartago
-    markers[12] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.572534, -85.697610),
-      title:"Playa la penca",
-      animation: google.maps.Animation.DROP
-    });
-    markers[13] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.572650, -85.680111),
-      title:"Playa hermosa",
-      animation: google.maps.Animation.DROP
-    });
-    markers[14] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.577407, -85.676656),
-      title:"Hotel el velero",
-      animation: google.maps.Animation.DROP
-    });
-    markers[15] = new google.maps.Marker({
-      position: new google.maps.LatLng(10.528831, -85.751071),
-      title:"Playa Matapalo",
-      animation: google.maps.Animation.DROP
-    });
-    //Guanacaste
   }
 
-  function ponerMarcadores(){
-    initialize();
-    var infowindow;
-    lugar = document.getElementById('lugar').value;
-    for (var i = lugar*4; i <= ((lugar*4)+3); i++) {
-      markers[i].setMap(map);
-    }
-    for (var i = lugar*4; i <= ((lugar*4)+3); i++) {
-      markers[i].addListener('click', function(){
-        infowindow = new google.maps.InfoWindow({
-          content:"Sitio Turistico Recomendado Por SmartTourCR",
-          position: new google.maps.LatLng(markers[i-1].position.lat(), markers[i-1].position.lng())
-        });
-        infowindow.open(map, markers[i]);
-      });
-    }
-  }
+
   </script>
 
 

@@ -7,11 +7,12 @@
       <div class="col-lg-4">
         <form onload="poblarMarcadores()">
 
-          <div class="col-lg-6">
-            <div id="mapa" style="width: 680px; height: 450px;"></div>
-          </div>
-          <input type="text" id="latitud" value="{{$atractivo->latitud}}" >
-          <input type="text" id="longitud" value="{{$atractivo->longitud}}" >
+            <div id="mapa" style="width: 1000px; height: 500px;"></div>
+          <input type="hidden" id="latitud" value="{{$atractivo->latitud}}" >
+          <input type="hidden" id="longitud" value="{{$atractivo->longitud}}" >
+          <input type="hidden" id="imagen" value="{{$atractivo->rutaImagen}}" >
+          <input type="hidden" id="descripcion" value="{{$atractivo->descripcion}}" >
+          <input type="hidden" id="nombre" value="{{$atractivo->nombre}}" >
         </form>
       </div>
 

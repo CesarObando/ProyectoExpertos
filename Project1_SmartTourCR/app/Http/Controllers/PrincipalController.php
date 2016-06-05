@@ -48,7 +48,7 @@ class PrincipalController extends Controller
 
 
         }
-        //print_r($atractivo->);
+        //print_r($atractivo);
         return view('atractivoSugerido',compact('atractivo'));
     }
 

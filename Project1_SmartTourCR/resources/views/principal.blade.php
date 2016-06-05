@@ -52,21 +52,39 @@
 
   var latitud = +document.getElementById('latitud').value;
   var longitud = +document.getElementById('longitud').value;
-  document.getElementById('latitud').value = longitud;
-  document.getElementById('longitud').value = latitud;
+  var imagen = "atractivos/"+document.getElementById('imagen').value;
+  var descripcion = document.getElementById('descripcion').value;
+  var nombre = document.getElementById('nombre').value;
+  //document.getElementById('latitud').value = longitud;
+  //document.getElementById('longitud').value = latitud;
+
+  var contentString =
+
+        '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<img src="'+imagen+'" alt="" style="width:500px; height: 200px;"/>'+
+        '<h1 id="firstHeading" class="firstHeading">'+nombre+'</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>'+nombre+'</b>,<br> '+descripcion+
+        '</p>'+
+        '</div>'+
+        '</div>';
+
+
     markers[0] = new google.maps.Marker({
       position: new google.maps.LatLng(latitud, longitud),
-      title:"Test",
+      title:nombre,
       animation: google.maps.Animation.DROP
     });
     markers[0].setMap(map);
     var infowindow;
     markers[0].addListener('click', function(){
     infowindow = new google.maps.InfoWindow({
-    content:"Sitio Turistico Recomendado Por SmartTourCR",
+    content: contentString,
     position: new google.maps.LatLng(markers[0].position.lat(), markers[0].position.lng())
     });
-    infowindow.open(map, markers[i]);
+    infowindow.open(map, markers[0]);
     });
   }
 

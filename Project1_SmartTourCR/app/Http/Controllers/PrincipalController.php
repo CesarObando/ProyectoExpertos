@@ -11,6 +11,11 @@ use DB;
 class PrincipalController extends Controller
 {
 
+
+    public function _construct(){
+      $this->middleware('auth',['only'=>'verAtractivos']);
+    }
+
     public function index()
     {
       DB::select('CALL bayes()');

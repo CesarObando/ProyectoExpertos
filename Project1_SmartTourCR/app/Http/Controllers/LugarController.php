@@ -8,6 +8,10 @@ use smarttour\Http\Requests;
 
 class LugarController extends Controller
 {
+
+    public function _construct(){
+      $this->middleware('auth');
+    }
     public function index()
     {
 

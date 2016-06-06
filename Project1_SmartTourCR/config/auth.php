@@ -70,10 +70,17 @@ return [
             'model' => smarttour\User::class,
         ],
 
+<<<<<<< HEAD
         'users' => [
            'driver' => 'database',
             'table' => 'users',
         ],
+=======
+         'users' => [
+            'driver' => 'database',
+            'table' => 'users',
+         ],
+>>>>>>> 415d99247fe99dc6ce6579f579c8da951bd64023
     ],
 
     /*

@@ -28,9 +28,7 @@ Route::resource('atractivo','AtractivoController');
 
 
 Route::resource('log','LogController');
-<<<<<<< HEAD
 Route::get('login','LogController@login');
-=======
 
 
 
@@ -52,4 +50,3 @@ Route::get('auth/logout',[
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
->>>>>>> 415d99247fe99dc6ce6579f579c8da951bd64023

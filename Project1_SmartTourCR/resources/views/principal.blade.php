@@ -148,13 +148,11 @@
   <nav class="navbar navbar-default navbar-fixed">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-<<<<<<< HEAD
         <li>
           <a href="{!!URL::to("login")!!}">
             Iniciar Sesión
           </a>
         </li>
-=======
         @if (Auth::guest())
                       <li><a href="{{ url('/login') }}">Iniciar Sesion</a></li>
 
@@ -169,7 +167,6 @@
                           </ul>
                       </li>
                   @endif
->>>>>>> 415d99247fe99dc6ce6579f579c8da951bd64023
       </ul>
     </div>
 

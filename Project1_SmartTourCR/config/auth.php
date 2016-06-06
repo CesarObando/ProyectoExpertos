@@ -70,10 +70,10 @@ return [
             'model' => smarttour\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+         'users' => [
+            'driver' => 'database',
+            'table' => 'users',
+         ],
     ],
 
     /*

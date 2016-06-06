@@ -112,6 +112,7 @@
       </a>
     </div>
 
+
     <ul class="nav">
       <li class="active">
         <a href="{!!URL::to("/")!!}">
@@ -125,6 +126,7 @@
           <p>Quienes somos?</p>
         </a>
       </li>
+        @if (Auth::user())
       <li>
         <a href="{!!URL::to("verAtractivos")!!}">
           <i class="pe-7s-map-marker"></i>
@@ -137,6 +139,7 @@
           <p>Lugar</p>
         </a>
       </li>
+      @endif
     </ul>
   </div>
 </div>
@@ -145,11 +148,20 @@
   <nav class="navbar navbar-default navbar-fixed">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="#">
-            Cerrar Sesión
-          </a>
-        </li>
+        @if (Auth::guest())
+                      <li><a href="{{ url('/login') }}">Iniciar Sesion</a></li>
+
+                  @else
+                      <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                              {{ Auth::user()->name }} <span class="caret"></span>
+                          </a>
+
+                          <ul class="dropdown-menu" role="menu">
+                              <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+                          </ul>
+                      </li>
+                  @endif
       </ul>
     </div>
 

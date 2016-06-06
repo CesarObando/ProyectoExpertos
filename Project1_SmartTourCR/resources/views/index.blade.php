@@ -56,43 +56,4 @@
   </div>
 </div>
 
-<script >
-/*
-
-function sugerirAtractivo(){
-
-$('#sugeriratractivo').submit(function(event) {
-        //Ocultamos nuevamente el form final si recarga el botón
-        //$("#resultadoRecinto").toggle();
-        //Prevenimos el funcionamiento por defecto del submit
-        event.preventDefault();
-        //Obtenemos los parametros
-        var clima =  document.getElementById('clima').value;
-        var duracion = document.getElementById('duracion').value;
-        var tipoCamino = document.getElementById('tipoCamino').value;
-        var precio = document.getElementById('precio').value;
-        document.getElementById('precio').value = 'b';
-        //Utilizamos ajax para enviar la petición
-        $.ajax({
-           type: "POST",
-           dataType: "jsonp",
-           url: 'http://www.smarttourcr.esy.es/WSSmartTour/GetDatos.php',
-           data: {
-                'clima': clima,
-                'duracion': duracion,
-                'tipoCamino': tipoCamino,
-                'precio': precio
-           },
-           dataType: 'json',
-
-           success: function(data)
-           {
-             $("#resultado").html(data);
-           }
-         });
-    });
-}*/
-</script>
-
-
 @stop

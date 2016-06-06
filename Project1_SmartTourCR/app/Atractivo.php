@@ -22,6 +22,7 @@ class Atractivo extends Model
     return DB::table('atractivo')
         ->join('lugar','lugar.id','=','atractivo.idlugar')
         ->select('atractivo.*','lugar.nombre as nombreLugar')
+        ->where('atractivo.latitud','!=', 0)
         ->get();
   }
 }

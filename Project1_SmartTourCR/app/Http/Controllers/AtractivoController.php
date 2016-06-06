@@ -3,7 +3,7 @@
 namespace smarttour\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use DB;
 use smarttour\Http\Requests;
 
 class AtractivoController extends Controller
@@ -13,7 +13,7 @@ class AtractivoController extends Controller
   public function _construct(){
     $this->middleware('auth');
   }
-  
+
   public function index()
   {
 
@@ -71,7 +71,9 @@ class AtractivoController extends Controller
 
   public function verAtractivos()
   {
+    //$atractivos = DB::select('select * from atractivo where latitud !=0');
     $atractivos = \smarttour\Atractivo::Atractivos();
+    //print_r($atractivos);
     return view('verAtractivos',compact('atractivos'));
   }
 

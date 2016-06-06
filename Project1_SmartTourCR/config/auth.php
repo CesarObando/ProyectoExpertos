@@ -66,14 +66,14 @@ return [
 
     'providers' => [
         'users' => [
-            'driver' => 'eloquent',
+           'driver' => 'eloquent',
             'model' => smarttour\User::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'users' => [
+           'driver' => 'database',
+            'table' => 'users',
+        ],
     ],
 
     /*

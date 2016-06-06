@@ -146,8 +146,8 @@
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
         <li>
-          <a href="#">
-            Cerrar Sesión
+          <a href="{!!URL::to("login")!!}">
+            Iniciar Sesión
           </a>
         </li>
       </ul>

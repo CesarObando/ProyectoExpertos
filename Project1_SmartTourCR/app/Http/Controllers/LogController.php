@@ -12,6 +12,8 @@ use smarttour\Http\Controllers\Controller;
 
 class LogController extends Controller
 {
+
+
     public function index()
     {
 
@@ -24,11 +26,17 @@ class LogController extends Controller
 
     public function store(LoginRequest $request)
     {
+      //print_r($request['email']);
+      //print_r($request['password']);
       if(Auth::attempt(['email' => $request['email'], 'password' => $request['password']])){
-        return Redirect::to('insertarLugar');
+        return Redirect::to('/');
       }
       Session::flash('message-error','Los datos no son correctos');
-      return Redirect::to('/');
+      return Redirect::to('insertarLugar');
+    }
+
+    public function login(){
+      return view('login');
     }
 
     public function show($id)

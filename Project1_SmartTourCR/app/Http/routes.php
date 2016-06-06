@@ -27,3 +27,4 @@ Route::get('eliminarAtractivo/{id}','AtractivoController@eliminar');
 Route::resource('atractivo','AtractivoController');
 
 Route::resource('log','LogController');
+Route::get('login','LogController@login');

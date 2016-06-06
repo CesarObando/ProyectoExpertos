@@ -65,7 +65,7 @@ class AtractivoController extends Controller
 
   public function eliminar($id)
   {
-    \smarttour\Atractivo::destroy($id);
+    DB::update('update atractivo set longitud = 0, latitud = 0 where id = ?',[$id]);
     return redirect('verAtractivos');
   }
 

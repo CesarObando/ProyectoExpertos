@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use smarttour\Http\Requests;
 
+use DB;
+
 class LugarController extends Controller
 {
 
@@ -29,7 +31,7 @@ class LugarController extends Controller
       'latitud' => $request['latitud'],
       'longitud' => $request['longitud'],
     ]);
-    return view ('verLugares');
+    return view ('principal');
     }
 
     public function show($id)
@@ -53,13 +55,15 @@ class LugarController extends Controller
 
     public function eliminar($id)
     {
-      \smarttour\Lugar::destroy($id);
+      DB::update('update lugar set longitud = 0, latitud = 0 where id = ?',[$id]);
+      $lugar = \smarttour\Lugar::find($id);
+      DB::update('update atractivo set longitud = 0, latitud = 0 where idlugar = ?',[$lugar->id]);
       return redirect('verLugares');
     }
 
     public function verLugares()
     {
-      $lugares = \smarttour\Lugar::All();
+      $lugares = \smarttour\Lugar::Lugares();
       return view('verLugares',compact('lugares'));
     }
 }

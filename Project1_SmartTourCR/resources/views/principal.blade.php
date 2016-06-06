@@ -148,13 +148,9 @@
   <nav class="navbar navbar-default navbar-fixed">
     <div class="container-fluid">
       <ul class="nav navbar-nav navbar-right">
-        <li>
-          <a href="{!!URL::to("login")!!}">
-            Iniciar Sesión
-          </a>
-        </li>
+
         @if (Auth::guest())
-                      <li><a href="{{ url('/login') }}">Iniciar Sesion</a></li>
+                      <li><a href="{{ url('/login') }}">Iniciar Sesión</a></li>
 
                   @else
                       <li class="dropdown">

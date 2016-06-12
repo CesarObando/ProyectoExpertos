@@ -31,7 +31,7 @@ class LugarController extends Controller
       'latitud' => $request['latitud'],
       'longitud' => $request['longitud'],
     ]);
-    return view ('principal');
+    return view ('/');
     }
 
     public function show($id)
